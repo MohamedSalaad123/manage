@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-navy-950: #07111e;
+  --color-navy-900: #0b192c;
+  --color-navy-800: #122640;
+  --color-steel-700: #1b4368;
+  --color-steel-600: #245582;
+  --color-steel-500: #2e6b9e;
+  --color-steel-100: #e8f0f7;
+  --color-steel-50: #f3f7fb;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    color: #0f172a;
+    background-color: #f8fafc;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.print-only {
+  display: none;
+}
+
+@page {
+  size: auto;
+  margin: 14mm 12mm;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .print-report-sheet {
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+
+  .print-table-wrapper {
+    overflow: visible !important;
+  }
+
+  .print-report-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    font-size: 10px !important;
+  }
+
+  .print-report-table thead {
+    display: table-header-group;
+  }
+
+  .print-report-table tr {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .print-report-table th,
+  .print-report-table td {
+    white-space: normal !important;
+    word-break: break-word;
+    padding: 6px 8px !important;
+  }
+}

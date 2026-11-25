@@ -1,0 +1,6 @@
+{
+  "name": "KHAYRE CONSTRUCTION AND MATERIALS COMPANY — WMS",
+  "description": "Enterprise multi-warehouse Warehouse Management System for Khayre Construction and Materials Company with real-time MongoDB inventory, weighted average valuation, inter-warehouse transfers, stock counts, and role-based access control.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
